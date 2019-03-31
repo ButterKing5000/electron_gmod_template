@@ -1,0 +1,18 @@
+:root {
+  --bg: #1d1d1d;
+  --main: #0080ff;
+}
+
+* {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+  background-color: var(--bg);
+}
+
+.title {
+  color: var(--main);
+  text-align: center;
+  font-size: 2em;
+}
