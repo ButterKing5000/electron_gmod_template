@@ -1,6 +1,8 @@
 :root {
   --bg: #1d1d1d;
+  --bg2: #262626;
   --main: #0080ff;
+  --border: 10px;
 }
 
 * {
@@ -8,11 +10,60 @@
 }
 
 body {
-  background-color: var(--bg);
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
 }
 
-.title {
+#App {
+  background-color: var(--bg);
+  padding: var(--border);
+  margin: 0;
+}
+
+#outputContainer {
+  position: relative;
+  background-color: var(--bg2);
+  width: 100%;
+  height: 83%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+#outputContainer::-webkit-scrollbar {
+  width: 0;
+}
+
+#inputContainer {
+  position: absolute;
+  width: calc(100% - var(--border)*2);
+  height: 50px;
+  left: var(--border);
+  bottom: var(--border);
+  display: block;
+  background-color: red
+}
+
+#input {
+  margin-top: var(--border);
+  padding: var(--border);
+  width: calc(100% - var(--border)*2);
+  background-color: var(--bg2);
+  border: none;
+  outline-color: var(--main);
+  color: white;
+  font-size: 1em;
+}
+
+#title {
   color: var(--main);
   text-align: center;
   font-size: 2em;
 }
+
+.line {
+  padding: 0 10px;
+  margin: 5px;
+  word-wrap: break-word;
+}
+
